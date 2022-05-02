@@ -1,8 +1,11 @@
 var webdriver = require('selenium-webdriver');
 var firefox = require('selenium-webdriver/firefox');
-var options = firefox.Options;
+require('geckodriver');
 
-var driver = new webdriver.Builder().
+var options = firefox.Options;
+options.apply
+
+var driver = new webdriver.Builder();
 forBrowser('firefox').
 setFirefoxOptions(options).
 build();
