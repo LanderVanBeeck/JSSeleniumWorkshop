@@ -1,12 +1,27 @@
 var webdriver = require('selenium-webdriver');
+
 var firefox = require('selenium-webdriver/firefox');
-require('geckodriver');
 
-var options = firefox.Options;
-options.apply
+require('geckodriver')
 
-var driver = new webdriver.Builder();
-forBrowser('firefox').
-setFirefoxOptions(options).
-build();
-driver.get('https://demoqa.com/automation-practice-form');
+var options = new firefox.Options().setBinary('C:\\Program Files\\Mozilla Firefox\\firefox.exe')
+
+
+
+async function test() {
+
+    var driver = new webdriver.Builder().
+
+    forBrowser('firefox').
+
+    setFirefoxOptions(options).
+
+    build();
+
+    driver.get('https://demoqa.com/automation-practice-form');
+
+}
+
+
+
+test()
