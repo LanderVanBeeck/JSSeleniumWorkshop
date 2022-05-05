@@ -12,7 +12,6 @@ var options = new firefox.Options().setBinary('C:\\Program Files\\Mozilla Firefo
 
 
 async function test() {
-
     var driver = new webdriver.Builder().
     forBrowser('firefox').
     setFirefoxOptions(options).
@@ -23,8 +22,8 @@ async function test() {
     driver.findElement(By.id('lastName')).sendKeys('Van Beeck');
     driver.findElement(By.id('userEmail')).sendKeys('landervanbeeck@hotmail.com');
     driver.findElement(By.id('userNumber')).sendKeys('0492163907');
-    driver.findElement(By.id('gender-radio-1')).click();
-    driver.findElement(By.id('submit')).submit();
+    driver.findElement(By.className('custom-control custom-radio custom-control-inline')).click();
+    driver.findElement(By.className('custom-control custom-checkbox custom-control-inline')).click();
 }
 
 test();
